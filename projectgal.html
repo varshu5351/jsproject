@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title> 
+   
+</head> 
+<style> 
+       *{
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+        
+       } 
+
+       li{
+        list-style: none;
+       } 
+       .container{
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+        margin: 40px auto;
+       } 
+
+       .container ul {
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; 
+        margin-bottom: 20px;
+       }  
+       .container ul li  {
+       letter-spacing: 1px;
+       padding: 5px 15px;
+       cursor: pointer;
+      margin: 5px;
+      text-transform: uppercase;
+       border-bottom: 1px solid transparent; 
+       font-size: 25px;
+       font-size: large;
+      } 
+      
+      .container ul li:hover{ 
+        background-color: rgb(196, 106, 219);
+        border-color: rgb(232, 68, 161); 
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      } 
+      .container ul li {
+    background-color: rgb(204, 176, 198);
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin: 5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    font-size: 25px;
+    font-size: large;
+}
+    
+     .show{
+       animation:show .5s ease 0s 1 forwards ;
+       transform-origin: center;
+      } 
+      .hide{
+       animation:hide .5s ease 0s 1 forwards ;
+       transform-origin: center;
+      } 
+      @keyframes hide {
+        0%{
+            transform : scale(1);
+        }
+        100%{
+            transform: scale(0);
+            width: 0;
+            height: 0;
+            margin: 0;
+        }
+     } 
+     @keyframes show {
+        0%{
+           
+            transform: scale(0);
+            width: 0;
+            height: 0;
+            margin: 0;
+        }
+        100%{
+            transform: scale(1); 
+        }
+     }
+      @media(max-width: 800px){
+        .product .itemBox {
+            width: 85%;
+            height: 90%;
+        }
+      } 
+      .products{
+        width: 1200px;
+        margin: 20px auto;
+        columns: 3;
+        column-gap: 10px;
+        width: 90%;
+      }
+ .products .box{
+  width: 100%;
+  margin-bottom: 10px;
+  break-inside: avoid;
+ }
+ .products .box img {
+ max-width: 100%;
+ border-radius: 10%;
+ object-fit: cover;
+ }
+     
+</style>
+
+
+<body>
+ <h1 style="display: block; font-style: italic ; color: rgb(234, 174, 206) ; margin-left:60px ;">Gallery</h1>
+    <section class="container"> 
+        <ul class="gallery">
+            <li class="filter active" data-filter="all">All</li> 
+            <li class="filter" data-filter="Bags">Bags</li>
+            <li class="filter" data-filter="Watch">Watch</li>
+            <li class="filter" data-filter="Headphones">Headphones</li>
+        </ul> 
+           <div class="products">
+            <div class="itemBox Watch">
+                <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/10317185/2023/2/23/50cc79d0-2e16-43c3-9dad-0760e25db49f1677153238684-French-Connection-Women-Rose-Gold-Toned-Analogue-Watch-FCN00-1.jpg" data-item="watch"  alt="" class="box">
+            </div> 
+           
+            <div class="itemBox Watch ">
+                <img src="https://media.6media.me/media/catalog/product/8/6/8681668274990-1_1.jpg" data-item="watch"  alt="" class="box">
+            </div>
+            <div class="itemBox Watch ">
+                <img src="https://cdn4.ethoswatches.com/the-watch-guide/wp-content/uploads/2017/06/3-zoom-1.jpg" data-item="watch" class="box" alt="">
+            </div>
+            <div class="itemBox Watch ">
+                <img src="https://cdn4.ethoswatches.com/the-watch-guide/wp-content/uploads/2019/03/0114791-8-Large.jpg?tr=q-70" data-item="watch" class="box"  alt="">
+            </div>
+            <div class="itemBox Watch ">
+                <img src=" https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/f/8/tr:w-270,/f8935ebAMWW529_1.jpg?rnd=20200526195200"  class="box"alt="" data-item="watch" >
+            </div>
+            
+
+
+            <div class="itemBox Bags ">
+                <img src="https://imgix.bustle.com/uploads/image/2019/10/31/22693ebe-ec19-424c-b489-4f0c30c266fd-crop-gettyimages-1175201331.jpg?w=400&h=500&fit=crop&crop=faces&auto=format%2Ccompress " data-item="Bags"  class="box" alt="">
+            </div>
+            <div class="itemBox Bags ">
+                <img src="https://bagsetcetera.in/wp-content/uploads/2022/07/Untitled-Capture99900123-copy-scaled.webp" data-item="Bags" class="box" alt="">
+            </div>
+
+            <div class="itemBox Bags ">
+                <img src=" https://www.lavieworld.com/cdn/shop/products/HCCS498042M4_0_1024x1024.jpg?v=1703587753" data-item="Bags" class="box" alt="">
+            </div>
+            <div class="itemBox Bags ">
+                <img src="https://media.glamourmagazine.co.uk/photos/64e61724abb35f1e36cc9df0/16:9/w_8176,h_4599,c_limit/WORKBAGS%20202308231%20GettyImages-1632124247_L.jpg" data-item="Bags"  class="box" alt="">
+      
+            </div>
+
+            <div class="itemBox Bags ">
+                <img src=" https://imgmedia.lbb.in/media/2021/05/609d0ab444904a52d0f1e030_1620904628751.webp " data-item="Bags"  class="box" alt="">
+            </div>
+ 
+            <div class="itemBox Bags ">
+                <img src="https://imgmedia.lbb.in/media/2021/05/609d0ab444904a52d0f1e032_1620904628754.webp " data-item="Bags"  class="box" alt="">
+            </div>
+            <div class="itemBox Bags ">
+                <img src="https://imgmedia.lbb.in/media/2021/05/609d0ab544904a52d0f1e035_1620904629210.webp  " data-item="Bags" class="box"  alt="">
+            </div>
+
+            <div class="itemBox  Bags">
+                <img src="https://imgmedia.lbb.in/media/2021/05/609d0ab444904a52d0f1e02f_1620904628750.webp" data-item="Bags"  class="box" alt="">
+            </div> 
+            <div class="itemBox  Bags">
+            <img src="https://bageasy.in/cdn/shop/files/IMG_2418_600x.jpg?v=1693913855" alt=""  data-item="Bags"  class="box">
+        </div>
+            
+            <div class="itemBox Headphones">
+                <img src="https://www.boat-lifestyle.com/cdn/shop/products/lightweight-black_1500x.jpg?v=1673002501" data-item="Headphones"    class="box"alt="">
+            </div> 
+            <div class="itemBox Headphones">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2022/6/VQ/JS/GX/107323815/boat-rockerz-450-pro-bluetooth-on-ear-headphones-500x500.jpg" data-item="Headphones"  class="box" alt=""   >
+            </div> 
+            <div class="itemBox Headphones">
+     
+            </div> 
+            <div class="itemBox Headphones">
+          
+            </div> 
+            <div class="itemBox Headphones">
+                <img src="https://www.shutterstock.com/image-photo/fashion-portrait-young-stylish-hipster-260nw-1793369287.jpg" data-item="Headphones"  alt=""  class="box" >
+            </div> 
+            <div class="itemBox Headphones">
+                <img src="https://www.vplak.com/500-images/sony/WH-XB900N/black/image-7.jpg" data-item="Headphones"  alt=""  class="box" >
+            </div> 
+            <div class="itemBox Headphones">
+                <img src="https://www.universityofcalifornia.edu/sites/default/files/styles/article_default_banner/public/headphones-hero.jpeg?h=34bbd072&itok=-lZqbDce" data-item="Headphones"  class="box" alt=""  >
+            </div> 
+           </div>
+    </section>
+
+<script> 
+    //    selecting ul 
+        
+         const gallery =document.querySelector(".gallery"); 
+        //  selecting img  
+        
+        const itemBoxes =document.querySelectorAll(".itemBox")
+        // console.log( itemBoxes)
+             
+         gallery.addEventListener("click", (e)=>{ 
+            console.log(e.target.classList)
+           
+            if(e.target.classList.contains("filter"))
+            {
+               
+                gallery.querySelector(".active").classList.remove("active");  
+
+                e.target.classList.add("active");
+                
+                const filterValue = e.target.getAttribute("data-filter");
+                console.log(filterValue) 
+
+                  itemBoxes.forEach(item =>{
+                    if(item.classList.contains(filterValue) || filterValue ==="all"){
+                        item.classList.add("show") ;
+
+                        item.classList.remove("hide");
+                    } 
+                    else {
+                        item.classList.add("hide")
+                    } 
+                      })
+             }
+
+         })
+
+       </script>
+
+</body>  
+
+
+</html>
